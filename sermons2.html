@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Of Refugee Assembly - Sermons</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #002366; /* deep blue */
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #B22222; /* red */
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x600/?bible,church');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .section h2 {
+      color: #8A2BE2; /* purple headings */
+      margin-bottom: 20px;
+    }
+    .highlight {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .highlight:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .highlight img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .highlight button {
+      background-color: #B22222;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .highlight button:hover {
+      background-color: #8A2BE2;
+    }
+    .recorded, .archive, .upcoming {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #fdfdfd;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      border: 2px solid #002366;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    .social {
+      margin-top: 30px;
+    }
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #002366;
+      transition: color 0.3s;
+    }
+    .social a:hover {
+      color: #B22222;
+    }
+    footer {
+      background-color: #002366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #8A2BE2;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index2.html">Home</a>
+      <a href="about2.html">About</a>
+      <a href="ministries2.html">Ministries</a>
+      <a href="sermons2.html">Sermons</a>
+      <a href="events.html">Events</a>
+      <a href="givings2.html">Giving</a>
+      <a href="contact2.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Sermons & Teachings</h1>
+    <p>Faith comes by hearing, and hearing by the Word of God.</p>
+  </section>
+
+  <section class="section">
+    <h2>Weekly Sermon Highlight</h2>
+    <div class="highlight">
+      <img src="https://source.unsplash.com/800x400/?preacher,church" alt="Sermon">
+      <h3>Walking in Faith - Pastor John Doe</h3>
+      <p>Discover how to strengthen your walk with God through faith, prayer, and obedience.</p>
+      <button onclick="window.open('https://www.youtube.com','_blank')">Watch Now</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Recorded Sermons</h2>
+    <div class="recorded">
+      <div class="card">
+        <h3>YouTube Sermons</h3>
+        <p>Watch our full library of past sermons on YouTube.</p>
+        <a href="https://www.youtube.com" target="_blank">Go to YouTube</a>
+      </div>
+      <div class="card">
+        <h3>Facebook Sermons</h3>
+        <p>Join us on Facebook Live or watch past sermon recordings.</p>
+        <a href="https://www.facebook.com" target="_blank">Go to Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Sermon Archive</h2>
+    <div class="archive">
+      <div class="card">
+        <h4>The Power of Prayer</h4>
+        <p>Feb 10, 2025 – Pastor Mary Jane</p>
+      </div>
+      <div class="card">
+        <h4>Living a Life of Purpose</h4>
+        <p>Feb 3, 2025 – Pastor John Doe</p>
+      </div>
+      <div class="card">
+        <h4>Overcoming Fear with Faith</h4>
+        <p>Jan 27, 2025 – Pastor Peter Kimani</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Upcoming Sermons & Series</h2>
+    <div class="upcoming">
+      <div class="card">
+        <h4>Series: Kingdom Living</h4>
+        <p>Starting March 2025 – Pastor Jane Doe</p>
+      </div>
+      <div class="card">
+        <h4>Revival Nights</h4>
+        <p>April 2025 – Guest Speaker: Bishop David</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Follow Us</h2>
+    <p>Stay connected with City Of Refugee Assembly sermons online:</p>
+    <div class="social">
+      <a href="https://www.youtube.com" target="_blank">YouTube</a> |
+      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+      <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 City Of Refugee Assembly | All Rights Reserved</p>
+    <p>
+      <a href="index2.html">Home</a> |
+      <a href="about2.html">About</a> |
+      <a href="ministries2.html">Ministries</a> |
+      <a href="sermons2.html">Sermons</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>
