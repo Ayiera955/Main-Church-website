@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | City Of Refugee Assembly</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: white;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2c003e;
+      padding: 1rem 2rem;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff3c78;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: url('https://stockcake.com/i/worshipful-crowd_5gwdrh.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #d4a5ff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Event Section */
+    .events-section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .events-section h2 {
+      font-size: 2rem;
+      color: #d4a5ff;
+      margin-bottom: 2rem;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .event-card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(212, 165, 255, 0.4);
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .event-card .content {
+      padding: 1rem;
+    }
+
+    .event-card h3 {
+      color: #ff3c78;
+      margin-bottom: 0.5rem;
+    }
+
+    .event-card p {
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    .event-card .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1.2rem;
+      background: #d4a5ff;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .event-card .btn:hover {
+      background: #ff3c78;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c003e;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      color: white;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">City Of Refugee Assembly</div>
+    <ul>
+      <li><a href="index2.html">Home</a></li>
+      <li><a href="about2.html">About</a></li>
+      <li><a href="ministries2.html">Ministries</a></li>
+      <li><a href="sermons2.html">Sermons</a></li>
+      <li><a href="events2.html">Events</a></li>
+      <li><a href="givings2.html">Giving</a></li>
+      <li><a href="contact2.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Upcoming Events</h1>
+      <p>Join us as we gather, worship, and grow together</p>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section class="events-section">
+    <h2>This Month’s Events</h2>
+    <div class="event-grid">
+      <!-- Event 1 -->
+      <div class="event-card">
+        <img src="https://dreamstime.com/crowd-raising-hands-worship-image.jpg" alt="Event 1">
+        <div class="content">
+          <h3>Youth Worship Night</h3>
+          <p>Date: Sept 14, 2025<br> Location: Main Sanctuary</p>
+          <p>A powerful night of worship and fellowship led by our youth ministry team.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="event-card">
+        <img src="https://dreamstime.com/illustration-conference-event-image.jpg" alt="Event 2">
+        <div class="content">
+          <h3>Family Conference</h3>
+          <p>Date: Sept 21–23, 2025<br> Location: CITAM Grounds</p>
+          <p>Equipping families with biblical principles to thrive in today’s world.</p>
+          <a href="#" class="btn">Register</a>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="event-card">
+        <img src="https://stockcake.com/i/worshipful-crowd_5gwdrh.jpg" alt="Event 3">
+        <div class="content">
+          <h3>Community Outreach</h3>
+          <p>Date: Sept 28, 2025<br> Location: City Center</p>
+          <p>Join us in sharing the love of Christ through service and outreach programs.</p>
+          <a href="#" class="btn">Volunteer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 City Of Refugee Assembly. All rights reserved.</p>
+    <p>Follow us on Facebook | YouTube | TikTok</p>
+  </footer>
+</body>
+</html>
