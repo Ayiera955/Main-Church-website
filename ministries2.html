@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Of Refugee Assembly - Ministries</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+        header {
+            background-color: #002366; /* deep blue */
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #8A2BE2; /* purple */
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x600/?church,worship');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .ministries {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+        }
+        .card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            background-color: #f0f0ff;
+        }
+        .card h2 {
+            color: #8A2BE2; /* purple headings */
+        }
+        .cta {
+            background-color: #B22222; /* red */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .cta h2 {
+            margin-bottom: 15px;
+        }
+        .cta a {
+            background-color: white;
+            color: #B22222;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+        .cta a:hover {
+            background-color: #8A2BE2;
+            color: white;
+        }
+        footer {
+            background-color: #002366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #B22222;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index2.html">Home</a>
+            <a href="about2.html">About</a>
+            <a href="ministries2.html">Ministries</a>
+            <a href="sermons.html">Sermons</a>
+            <a href="events.html">Events</a>
+            <a href="givings2.html">Giving</a>
+            <a href="contact2.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Our Ministries</h1>
+        <p>Serving God, Serving People – Find your place to belong.</p>
+    </section>
+
+    <section class="ministries">
+        <div class="card">
+            <h2>Children’s Ministry</h2>
+            <p>Raising the next generation in God’s Word through fun, interactive, and spiritually uplifting Sunday school and discipleship classes.</p>
+        </div>
+        <div class="card">
+            <h2>Youth Ministry</h2>
+            <p>Empowering youth with mentorship, leadership programs, and spiritual growth opportunities to prepare them for a Christ-centered life.</p>
+        </div>
+        <div class="card">
+            <h2>Music & Worship</h2>
+            <p>Leading the congregation in worship through song, instruments, and the arts – glorifying God with excellence and passion.</p>
+        </div>
+        <div class="card">
+            <h2>Men’s Fellowship</h2>
+            <p>Building strong, godly men through fellowship, mentorship, and outreach to impact families and communities positively.</p>
+        </div>
+        <div class="card">
+            <h2>Women’s Ministry</h2>
+            <p>Empowering women through mentorship, prayer, and service as they grow in their faith and impact their families and society.</p>
+        </div>
+        <div class="card">
+            <h2>Community Outreach & Missions</h2>
+            <p>Reaching out with love to the less fortunate through charity, evangelism, hospital visits, and education initiatives.</p>
+        </div>
+        <div class="card">
+            <h2>Counseling & Family Ministry</h2>
+            <p>Supporting families through counseling, marriage enrichment, and pastoral care to nurture strong and healthy homes.</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Get Involved in Ministry</h2>
+        <p>There’s a place for everyone in God’s work. Join a ministry and make a difference.</p>
+        <a href="contact.html">Join a Ministry</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 City Of Refugee Assembly | All Rights Reserved</p>
+        <p>
+            <a href="index2.html">Home</a> |
+            <a href="about2.html">About</a> |
+            <a href="ministries2.html">Ministries</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+
+</body>
+</html>
