@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giving | City Of Refugee Assembly</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8ff;
+      color: #222;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #3b0a45, #0a3d62);
+      padding: 1rem 2rem;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ff4757;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://stockcake.com/i/worship-service_986hmb.jpg') no-repeat center center/cover;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #fff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      color: #d1c4e9;
+    }
+
+    /* Giving Section */
+    .giving-section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .giving-section h2 {
+      font-size: 2rem;
+      color: #3b0a45;
+      margin-bottom: 1.5rem;
+    }
+
+    .giving-methods {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .giving-methods h3 {
+      color: #0a3d62;
+      margin-bottom: 1rem;
+    }
+
+    .giving-methods p {
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    /* Causes Section */
+    .causes-section {
+      padding: 3rem 2rem;
+      background: #f0f0ff;
+      text-align: center;
+    }
+
+    .causes-section h2 {
+      color: #3b0a45;
+      margin-bottom: 2rem;
+    }
+
+    .cause-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .cause-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .cause-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(59, 10, 69, 0.3);
+    }
+
+    .cause-card h3 {
+      color: #ff4757;
+      margin-bottom: 0.5rem;
+    }
+
+    .cause-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(90deg, #0a3d62, #3b0a45);
+      color: white;
+    }
+
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #ff4757;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #ff6b81;
+    }
+
+    /* Footer */
+    footer {
+      background: #3b0a45;
+      text-align: center;
+      padding: 2rem;
+      color: white;
+    }
+
+    footer p {
+      margin: 0.3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">City Of Refugee Assembly</div>
+    <ul>
+      <li><a href="index2.html">Home</a></li>
+      <li><a href="about2.html">About</a></li>
+      <li><a href="ministries2.html">Ministries</a></li>
+      <li><a href="sermons2.html">Sermons</a></li>
+      <li><a href="events2.html">Events</a></li>
+      <li><a href="givings2.html">Giving</a></li>
+      <li><a href="contact2.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Partner With Us in Building God’s Kingdom</h1>
+      <p>Your generosity transforms lives and communities</p>
+    </div>
+  </section>
+
+  <!-- Giving Methods -->
+  <section class="giving-section">
+    <h2>Ways to Give</h2>
+    <div class="giving-methods">
+      <h3>Bank Details</h3>
+      <p>Bank: [Your Bank Name]</p>
+      <p>Account Name: City Of Refugee Assembly</p>
+      <p>Account Number: 123456789</p>
+      <p>Branch: Nairobi</p>
+
+      <h3>M-Pesa</h3>
+      <p>Paybill: 123456</p>
+      <p>Account: CITYREFUGEE</p>
+
+      <h3>Other Giving Options</h3>
+      <p>You can also give through online platforms. Contact our office for details.</p>
+    </div>
+  </section>
+
+  <!-- Causes Section -->
+  <section class="causes-section">
+    <h2>How Your Giving Helps</h2>
+    <div class="cause-grid">
+      <div class="cause-card">
+        <h3>City of Refugee School</h3>
+        <p>Your giving helps us build and sustain a Christian-based school to impact future generations.</p>
+      </div>
+      <div class="cause-card">
+        <h3>Feeding the Needy</h3>
+        <p>We support vulnerable families by providing food, clothing, and shelter assistance.</p>
+      </div>
+      <div class="cause-card">
+        <h3>Missions & Outreach</h3>
+        <p>Your support enables us to reach more people with the gospel both locally and globally.</p>
+      </div>
+      <div class="cause-card">
+        <h3>Youth & Children Programs</h3>
+        <p>We invest in the next generation by running mentorship, training, and discipleship programs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="cta-section">
+    <h2>Be a Part of God’s Work</h2>
+    <p>Every contribution makes a difference. Join us today in giving back to the Kingdom.</p>
+    <a href="#" class="cta-btn">Give Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 City Of Refugee Assembly. All rights reserved.</p>
+    <p>Follow us on Facebook | YouTube | TikTok</p>
+  </footer>
+</body>
+</html>
