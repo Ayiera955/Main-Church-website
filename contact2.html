@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | City Of Refugee Assembly</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c2c54; /* Deep purple navbar */
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ff4d4d;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1523289333742-be1143f6b766?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .contact-info, .contact-form, .social-media {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .contact-info h2, .contact-form h2, .social-media h2 {
+            color: #2c2c54;
+            margin-bottom: 15px;
+        }
+        .contact-info p {
+            line-height: 1.6;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #b30000;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        form button {
+            padding: 12px;
+            background: #2c2c54;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background: #6a0dad;
+        }
+        .social-media ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+        .social-media ul li {
+            margin: 0 15px;
+        }
+        .social-media ul li a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #2c2c54;
+            transition: color 0.3s;
+        }
+        .social-media ul li a:hover {
+            color: #ff4d4d;
+        }
+        footer {
+            background: #2c2c54;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="about2.html">About</a></li>
+                <li><a href="ministries2.html">Ministries</a></li>
+                <li><a href="sermons2.html">Sermons</a></li>
+                <li><a href="events2.html">Events</a></li>
+                <li><a href="givings2.html">Giving</a></li>
+                <li><a href="contact2.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you</p>
+    </section>
+
+    <section class="contact-info">
+        <h2>Get In Touch</h2>
+        <p><strong>Address:</strong> City Of Refugee Assembly, Nairobi, Kenya</p>
+        <p><strong>Phone:</strong> +254 700 123 456</p>
+        <p><strong>Email:</strong> info@cityofrefugeeassembly.org</p>
+        <a href="tel:+254700123456" class="cta-button">Call Now</a>
+    </section>
+
+    <section class="contact-form">
+        <h2>Send Us a Message or Prayer Request</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject" required>
+            <textarea rows="5" placeholder="Your Message / Prayer Request" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section class="social-media">
+        <h2>Connect With Us</h2>
+        <ul>
+            <li><a href="#" title="TikTok">🎵 TikTok</a></li>
+            <li><a href="#" title="Facebook">📘 Facebook</a></li>
+            <li><a href="#" title="YouTube">▶️ YouTube</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 City Of Refugee Assembly. All rights reserved.</p>
+    </footer>
+</body>
+</html>
