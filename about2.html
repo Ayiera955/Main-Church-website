@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | City Of Refugee Assembly</title>
+  <meta name="description" content="Learn more about City Of Refugee Assembly — our history, vision, mission, beliefs, leadership, and community impact." />
+
+  <style>
+    :root {
+      --blue: #1e3a8a;
+      --red: #b91c1c;
+      --purple: #6d28d9;
+      --white: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --shadow: 0 8px 20px rgba(2, 6, 23, .08);
+      --ring: rgba(109, 40, 217, 0.25);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    a { color: var(--purple); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1100px, 92%); margin-inline: auto; }
+    .section { padding: 4rem 0; }
+
+    header { background: var(--white); border-bottom: 1px solid #e2e8f0; }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .brand { display: flex; align-items: center; gap: .5rem; font-weight: 800; color: var(--blue); }
+    .brand-logo { width: 40px; height: 40px; border-radius: 10px; background: conic-gradient(from 180deg, var(--blue), var(--purple), var(--red), var(--blue)); }
+    .menu { display: flex; gap: 1rem; }
+    .menu a { font-weight: 600; color: var(--muted); }
+    .menu a:hover { color: var(--blue); }
+
+    .hero {
+      background: linear-gradient(120deg, rgba(30,58,138,.9), rgba(109,40,217,.7)), url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop') center/cover;
+      color: var(--white);
+      padding: 6rem 0 5rem;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+    .hero p { font-size: 1.2rem; max-width: 60ch; margin-inline: auto; }
+
+    h2 { font-size: 1.8rem; margin-bottom: .5rem; }
+    p.lead { color: var(--muted); max-width: 70ch; }
+    .grid { display: grid; gap: 1.2rem; }
+    .grid-2 { grid-template-columns: repeat(2,1fr); }
+    .grid-3 { grid-template-columns: repeat(3,1fr); }
+    @media(max-width:900px){ .grid-3{grid-template-columns:1fr 1fr;} }
+    @media(max-width:640px){ .grid-2,.grid-3{grid-template-columns:1fr;} }
+
+    .card { background: var(--card); border:1px solid #e5e7eb; border-radius: 1rem; box-shadow: var(--shadow); padding:1.2rem; }
+    .avatar { width:80px; height:80px; border-radius:50%; background: linear-gradient(135deg,var(--red),var(--purple)); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:1.2rem; margin-right:1rem; }
+
+    footer { background:#0b1220; color:#e5e7eb; padding:2rem 0; }
+    footer a { color:#c7d2fe; }
+    .footer-grid { display:grid; gap:1.2rem; grid-template-columns:1.5fr 1fr 1fr; }
+    @media(max-width:800px){ .footer-grid { grid-template-columns:1fr; } }
+    .copyright { border-top:1px solid rgba(226,232,240,.2); margin-top:1rem; padding-top:.5rem; font-size:.9rem; color:#94a3b8; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-logo"></div>
+        <span>City Of Refugee Assembly</span>
+      </div>
+      <nav class="menu">
+        <a href="index2.html">Home</a>
+        <a href="about2.html">About</a>
+        <a href="ministries2.html">Ministries</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="events2.html">Events</a>
+        <a href="givings2.html">Giving</a>
+        <a href="contact2.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>About City Of Refugee Assembly</h1>
+      <p>Discover our story, our vision, and the heart behind our ministry.</p>
+    </div>
+  </section>
+
+  <!-- History -->
+  <section class="section">
+    <div class="container">
+      <h2>Our History</h2>
+      <p class="lead">City Of Refugee Assembly was founded with a burden to provide a spiritual home for people from all walks of life. Inspired by Psalm 46:1, we began as a small fellowship and have grown into a vibrant church family committed to worship, discipleship, and outreach.</p>
+    </div>
+  </section>
+
+  <!-- Vision and Mission -->
+  <section class="section" style="background:#f1f5f9;">
+    <div class="container grid grid-2">
+      <div>
+        <h2>Our Vision</h2>
+        <p>To know Christ intimately and to make Him known globally. We envision a Spirit-empowered church that transforms individuals, families, and communities for the glory of God.</p>
+      </div>
+      <div>
+        <h2>Our Mission</h2>
+        <p>Reach the lost with the Gospel, teach believers through discipleship, and send them into the world as ambassadors of Christ. We are committed to holistic ministry that touches every part of society.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Beliefs -->
+  <section class="section">
+    <div class="container">
+      <h2>Our Core Beliefs</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>The Bible</h3>
+          <p>We believe the Bible is the inspired, infallible Word of God, the final authority for faith and life.</p>
+        </div>
+        <div class="card">
+          <h3>The Trinity</h3>
+          <p>We believe in one God revealed in three persons: Father, Son, and Holy Spirit.</p>
+        </div>
+        <div class="card">
+          <h3>Salvation</h3>
+          <p>We believe salvation comes by grace through faith in Jesus Christ alone.</p>
+        </div>
+        <div class="card">
+          <h3>Prayer & Worship</h3>
+          <p>We believe prayer and worship are vital for a growing relationship with God and the advancement of His kingdom.</p>
+        </div>
+        <div class="card">
+          <h3>Community</h3>
+          <p>We believe in the power of authentic community and fellowship as the body of Christ.</p>
+        </div>
+        <div class="card">
+          <h3>Excellence</h3>
+          <p>We pursue excellence in all we do as a reflection of God’s glory and worthiness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section class="section" style="background:#f1f5f9;">
+    <div class="container">
+      <h2>Our Leadership</h2>
+      <div class="grid grid-3">
+        <div class="card" style="display:flex; align-items:center;">
+          <div class="avatar">P</div>
+          <div>
+            <h3>Lead Pastor</h3>
+            <p>Our lead pastor shepherds the church with a passion for the Word and discipleship.</p>
+          </div>
+        </div>
+        <div class="card" style="display:flex; align-items:center;">
+          <div class="avatar" style="background:linear-gradient(135deg,var(--blue),var(--purple));">A</div>
+          <div>
+            <h3>Associate Pastor</h3>
+            <p>Supports the church in preaching, teaching, and pastoral care.</p>
+          </div>
+        </div>
+        <div class="card" style="display:flex; align-items:center;">
+          <div class="avatar" style="background:linear-gradient(135deg,var(--red),var(--blue));">E</div>
+          <div>
+            <h3>Elders & Ministry Leaders</h3>
+            <p>Provide guidance, oversight, and leadership across church ministries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Impact -->
+  <section class="section">
+    <div class="container">
+      <h2>Community Impact</h2>
+      <p class="lead">We are more than a church service — we are a movement of believers impacting society. Through education, outreach programs, and partnerships, we meet practical needs while sharing the love of Christ.</p>
+      <div class="grid grid-2" style="margin-top:1rem;">
+        <div class="card">
+          <h3>Outreach</h3>
+          <p>Food drives, hospital visits, evangelism, and compassionate ministries that touch lives directly.</p>
+        </div>
+        <div class="card">
+          <h3>Education</h3>
+          <p>Scholarships, mentorship, and training programs equipping the next generation for leadership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="section" style="text-align:center; background:linear-gradient(135deg,var(--blue),var(--purple)); color:var(--white);">
+    <div class="container">
+      <h2>Be Part of Our Story</h2>
+      <p>Join us this Sunday and experience the warmth of our community and the presence of God.</p>
+      <a href="index.html#visit" style="display:inline-block; margin-top:1rem; padding:.9rem 1.2rem; background:var(--white); color:var(--blue); font-weight:700; border-radius:.8rem;">Plan Your Visit</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <div class="brand-logo"></div>
+          <span style="color:#fff;">City Of Refugee Assembly</span>
+        </div>
+        <p style="margin-top:.5rem; color:#cbd5e1;">A place to belong, grow, and serve.</p>
+      </div>
+      <div>
+        <h3 style="color:#fff;">Quick Links</h3>
+        <ul style="list-style:none; padding:0; margin:0;">
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#ministries">Ministries</a></li>
+          <li><a href="index.html#sermons">Sermons</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#giving">Giving</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="color:#fff;">Contact</h3>
+        <p>123 Church Avenue, Your City<br/>+254 700 000 000<br/>info@cora.church</p>
+      </div>
+    </div>
+    <div class="container copyright">© 2025 City Of Refugee Assembly. All rights reserved.</div>
+  </footer>
+</body>
+</html>
