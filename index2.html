@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>City Of Refugee Assembly | Official Website</title>
+  <meta name="description" content="City Of Refugee Assembly — a Christ-centered church. Welcome, worship, grow, serve." />
+
+  <!--
+    References / Inspiration:
+    - Structure and content outline inspired by the CITAM Church and JCC Church websites.
+    - This is a bespoke design for City Of Refugee Assembly using only HTML & CSS (no JavaScript frameworks).
+  -->
+
+  <style>
+    :root {
+      --blue: #1e3a8a;     /* deep blue */
+      --red: #b91c1c;      /* deep red */
+      --purple: #6d28d9;   /* royal purple */
+      --white: #ffffff;
+      --ink: #0f172a;      /* slate-900 */
+      --muted: #475569;    /* slate-600 */
+      --bg: #f8fafc;       /* slate-50 */
+      --card: #ffffff;
+      --ring: rgba(109, 40, 217, 0.25);
+      --shadow: 0 10px 25px rgba(2, 6, 23, .08);
+    }
+
+    /* Base */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--purple); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { width: min(1100px, 92%); margin-inline: auto; }
+    .section { padding: 4rem 0; }
+    .tag { display: inline-block; padding: .25rem .6rem; border-radius: 999px; font-size: .75rem; letter-spacing: .04em; text-transform: uppercase; background: #eef2ff; color: var(--blue); font-weight: 700; }
+    .btn { display: inline-block; padding: .8rem 1.1rem; border-radius: .75rem; font-weight: 700; letter-spacing: .02em; border: 2px solid transparent; box-shadow: var(--shadow); }
+    .btn:focus { outline: 3px solid var(--ring); outline-offset: 2px; }
+    .btn.primary { background: linear-gradient(135deg, var(--blue), var(--purple)); color: var(--white); }
+    .btn.alt { background: var(--white); color: var(--blue); border-color: var(--blue); }
+
+    /* Header / Nav */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,.86);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: .75rem; font-weight: 800; letter-spacing: .02em; }
+    .brand-logo {
+      width: 40px; height: 40px; border-radius: 10px; flex: none;
+      background: conic-gradient(from 180deg at 50% 50%, var(--blue), var(--purple), var(--red), var(--blue));
+      box-shadow: inset 0 0 0 3px #fff, 0 6px 14px rgba(2, 6, 23, .15);
+    }
+    .brand span { color: var(--blue); }
+
+    /* Mobile nav (CSS only) */
+    #nav-toggle { display: none; }
+    .menu { display: flex; gap: 1rem; align-items: center; }
+    .menu a { font-weight: 600; color: var(--muted); padding: .5rem .7rem; border-radius: .6rem; }
+    .menu a:hover { background: #eef2ff; color: var(--blue); text-decoration: none; }
+
+    .hamburger { display: none; cursor: pointer; border: 2px solid #e2e8f0; border-radius: .65rem; padding: .45rem .55rem; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 4px 0; }
+
+    @media (max-width: 860px) {
+      .menu { display: none; position: absolute; top: 64px; right: 4%; left: 4%; flex-direction: column; background: var(--card); padding: .75rem; border: 1px solid #e2e8f0; border-radius: 1rem; box-shadow: var(--shadow); }
+      #nav-toggle:checked ~ .menu { display: flex; }
+      .hamburger { display: block; }
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        linear-gradient(120deg, rgba(30,58,138,.92), rgba(109,40,217,.75), rgba(185,28,28,.65)),
+        url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      color: var(--white);
+      padding: 6rem 0 5rem;
+    }
+    .hero h1 { font-size: clamp(1.8rem, 3.2vw + 1rem, 3rem); line-height: 1.15; margin: .5rem 0 1rem; }
+    .hero p { font-size: clamp(1rem, .5vw + .95rem, 1.25rem); max-width: 60ch; }
+    .hero .cta { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.25rem; }
+
+    /* Cards / grids */
+    .grid { display: grid; gap: 1.2rem; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+
+    .card { background: var(--card); border: 1px solid #e5e7eb; border-radius: 1rem; box-shadow: var(--shadow); overflow: clip; }
+    .card .content { padding: 1.1rem 1.1rem 1.25rem; }
+    .card h3 { margin: .2rem 0 .5rem; }
+
+    /* Section headings */
+    .section h2 { font-size: clamp(1.4rem, 1.2vw + 1rem, 2rem); margin: 0 0 .6rem; }
+    .section p.lead { color: var(--muted); max-width: 70ch; }
+
+    /* Ministries */
+    .ministry-icon { width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(135deg, var(--blue), var(--purple)); display: grid; place-items: center; color: var(--white); font-weight: 800; box-shadow: var(--shadow); }
+
+    /* Sermons */
+    .sermon-meta { font-size: .9rem; color: var(--muted); }
+    .sermon-links { display: flex; gap: .5rem; margin-top: .6rem; flex-wrap: wrap; }
+    .sermon-links a { padding: .45rem .7rem; border-radius: .6rem; background: #f1f5f9; font-weight: 600; }
+
+    /* Events */
+    .event { display: grid; grid-template-columns: 1fr; border-left: 6px solid var(--purple); }
+    .event .content { padding: 1rem 1.1rem 1.25rem; }
+    .event time { display: inline-block; font-weight: 800; color: var(--blue); }
+
+    /* Giving */
+    .giving { background: linear-gradient(135deg, rgba(30,58,138,.08), rgba(109,40,217,.06)); border: 1px dashed #c7d2fe; }
+
+    /* Leadership */
+    .avatar { width: 80px; height: 80px; border-radius: 999px; background: linear-gradient(135deg, var(--red), var(--purple)); display: grid; place-items: center; color: #fff; font-weight: 800; box-shadow: var(--shadow); }
+
+    /* Contact */
+    .contact {
+      background: linear-gradient(135deg, rgba(30,58,138,.06), rgba(185,28,28,.06));
+      border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;
+    }
+    form { display: grid; gap: .9rem; }
+    input, textarea, select {
+      width: 100%; padding: .9rem 1rem; border: 1px solid #e2e8f0; border-radius: .8rem; background: var(--white);
+      font: inherit; color: inherit;
+    }
+    input:focus, textarea:focus, select:focus { outline: 3px solid var(--ring); border-color: var(--purple); }
+
+    /* Footer */
+    footer { background: #0b1220; color: #e5e7eb; }
+    footer a { color: #c7d2fe; }
+    .footer-grid { display: grid; gap: 1.2rem; grid-template-columns: 1.2fr 1fr 1fr; }
+    @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr; } }
+    .copyright { border-top: 1px solid rgba(226,232,240,.14); margin-top: 1.25rem; padding-top: 1rem; font-size: .9rem; color: #94a3b8; }
+
+  </style>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="City Of Refugee Assembly home">
+        <div class="brand-logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:1rem; line-height:1;">CITY OF REFUGEE</div>
+          <span style="font-size:.9rem;">ASSEMBLY</span>
+        </div>
+      </div>
+
+      <label for="nav-toggle" class="hamburger" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+
+      <nav class="menu" aria-label="Primary">
+        <a href="index2.html">Home</a>
+        <a href="about2.html">About</a>
+        <a href="ministries2.html">Ministries</a>
+        <a href="sermons2.html">Sermons</a>
+        <a href="events2.html">Events</a>
+        <a href="givings2.html">Giving</a>
+        <a href="#leadership">Leadership</a>
+        <a href="contact2.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero" role="banner">
+    <div class="container">
+      <span class="tag">Welcome Home</span>
+      <h1>City Of Refugee Assembly</h1>
+      <p class="lead">A Christ-centered family where everyone can encounter God, grow in the Word, and serve our city and the nations. “God is our refuge and strength, an ever-present help in trouble.” — Psalm 46:1</p>
+      <div class="cta">
+        <a class="btn primary" href="#sermons">Watch / Read Sermons</a>
+        <a class="btn alt" href="#visit">Plan Your Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Us</h2>
+      <p class="lead">We are a Bible-believing church passionate about worship, discipleship, and community transformation. Our assignment is to make Christ known and to equip believers for works of service.</p>
+      <div class="grid grid-3" style="margin-top:1.2rem;">
+        <article class="card">
+          <div class="content">
+            <span class="tag">Vision</span>
+            <h3>To Know Christ & Make Him Known</h3>
+            <p>We envision a vibrant, Spirit-led church raising Christ-like disciples who influence culture with the Gospel.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="content">
+            <span class="tag" style="background:#fee2e2; color: var(--red);">Mission</span>
+            <h3>Reach • Teach • Send</h3>
+            <p>We reach the lost, teach the found, and send equipped believers to serve in the church and in the marketplace.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="content">
+            <span class="tag" style="background:#f3e8ff; color: var(--purple);">Core Values</span>
+            <h3>Word • Prayer • Worship • Excellence • Community</h3>
+            <p>We build everything on Scripture, prayer, and Christ-exalting worship while pursuing excellence and authentic community.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ministries -->
+  <section id="Ministry" class="section" aria-labelledby="ministries-title">
+    <div class="container">
+      <h2 id="ministries-title">Our Ministries</h2>
+      <p class="lead">There’s a place for you to belong and serve. Explore ministries for every age and stage of life.</p>
+      <div class="grid grid-3" style="margin-top:1.1rem;">
+        <div class="card">
+          <div class="content" style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="ministry-icon">Y</div>
+            <div>
+              <h3>Youth & Young Adults</h3>
+              <p>Equipping the next generation through Bible study, mentorship, and vibrant worship gatherings.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content" style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="ministry-icon" style="background: linear-gradient(135deg,var(--red),var(--purple));">K</div>
+            <div>
+              <h3>Children’s Church</h3>
+              <p>Safe, fun, and Scripture-rich environments that help children love Jesus and others.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content" style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="ministry-icon" style="background: linear-gradient(135deg,var(--blue),var(--red));">M</div>
+            <div>
+              <h3>Music & Arts</h3>
+              <p>Leading the church in Christ-centered worship and creative expressions that glorify God.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content" style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="ministry-icon" style="background: linear-gradient(135deg,var(--purple),var(--blue));">W</div>
+            <div>
+              <h3>Women of Faith</h3>
+              <p>Fostering spiritual growth and sisterhood through prayer, study, and compassionate outreach.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content" style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="ministry-icon" style="background: linear-gradient(135deg,var(--red),var(--blue));">M</div>
+            <div>
+              <h3>Men of Purpose</h3>
+              <p>Raising servant leaders who model integrity, courage, and Christlikeness in all spheres of life.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content" style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="ministry-icon" style="background: linear-gradient(135deg,var(--blue),var(--purple));">C</div>
+            <div>
+              <h3>Community Outreach</h3>
+              <p>Meeting practical needs in our city through evangelism, compassion, and partnerships.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sermons / Media -->
+  <section id="sermons" class="section" aria-labelledby="sermons-title">
+    <div class="container">
+      <h2 id="sermons-title">Recent Sermons</h2>
+      <p class="lead">Grow in the Word with our latest teachings, devotionals, and worship moments.</p>
+
+      <div class="grid grid-3" style="margin-top:1.1rem;">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop" alt="Open Bible with warm light" />
+          <div class="content">
+            <h3>God Our Refuge</h3>
+            <div class="sermon-meta">Ps. 46:1 • 42 min • July 20, 2025</div>
+            <div class="sermon-links">
+              <a href="#">Watch</a>
+              <a href="#">Audio</a>
+              <a href="#">Notes (PDF)</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop" alt="Notebook and pen for sermon notes" />
+          <div class="content">
+            <h3>Anchored in Hope</h3>
+            <div class="sermon-meta">Heb. 6:19 • 38 min • July 13, 2025</div>
+            <div class="sermon-links">
+              <a href="#">Watch</a>
+              <a href="#">Audio</a>
+              <a href="#">Notes (PDF)</a>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1200&auto=format&fit=crop" alt="Hands lifted in worship" />
+          <div class="content">
+            <h3>Serving With Excellence</h3>
+            <div class="sermon-meta">Col. 3:23 • 44 min • July 6, 2025</div>
+            <div class="sermon-links">
+              <a href="#">Watch</a>
+              <a href="#">Audio</a>
+              <a href="#">Notes (PDF)</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events" class="section" aria-labelledby="events-title">
+    <div class="container">
+      <h2 id="events-title">Upcoming Events</h2>
+      <p class="lead">Join what God is doing in and through our church family.</p>
+
+      <div class="grid grid-2" style="margin-top:1.1rem;">
+        <article class="card event">
+          <div class="content">
+            <time datetime="2025-09-07">Sep 7, 2025</time>
+            <h3 style="margin:.3rem 0 .5rem;">Vision Sunday</h3>
+            <p>Celebrate testimonies, hear vision updates, and commit the new season to prayer.</p>
+            <div class="sermon-links"><a href="#visit">Plan Visit</a><a href="#contact">Ask a Question</a></div>
+          </div>
+        </article>
+        <article class="card event" style="border-left-color: var(--red);">
+          <div class="content">
+            <time datetime="2025-09-20">Sep 20, 2025</time>
+            <h3 style="margin:.3rem 0 .5rem;">Community Outreach Day</h3>
+            <p>Serve our neighborhoods through food drives, hospital visits, and evangelism teams.</p>
+            <div class="sermon-links"><a href="#contact">Volunteer</a><a href="#ministries">Join Outreach</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Giving -->
+  <section id="giving" class="section giving" aria-labelledby="giving-title">
+    <div class="container">
+      <h2 id="giving-title">Giving & Support</h2>
+      <p class="lead">Your generosity fuels the mission — thank you for partnering with City Of Refugee Assembly.</p>
+
+      <div class="grid grid-3" style="margin-top:1.1rem;">
+        <div class="card">
+          <div class="content">
+            <h3>Tithes & Offerings</h3>
+            <p>Give during services or via bank / mobile money. Replace these placeholders with your details:</p>
+            <ul>
+              <li><strong>Bank:</strong> Your Bank Name</li>
+              <li><strong>Account:</strong> 1234567890</li>
+              <li><strong>Mobile Money:</strong> Paybill 123456 • Acc: CORA</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h3>Projects & Missions</h3>
+            <p>Support church planting, scholarships, and city outreach programs.</p>
+            <a class="btn primary" href="#contact">Ask About Projects</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h3>Transparency</h3>
+            <p>We steward resources with integrity. Annual reports are available upon request.</p>
+            <a class="btn alt" href="#contact">Request Report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section id="leadership" class="section" aria-labelledby="leadership-title">
+    <div class="container">
+      <h2 id="leadership-title">Our Leadership</h2>
+      <p class="lead">We are shepherded by a team of pastors, elders, and ministry leaders who serve with humility.</p>
+      <div class="grid grid-3" style="margin-top:1.1rem;">
+        <div class="card">
+          <div class="content" style="display:flex; gap:1rem;">
+            <div class="avatar" aria-hidden="true">P</div>
+            <div>
+              <h3>Lead Pastor</h3>
+              <p>Brief bio of the lead pastor. Passionate about teaching the Word and discipleship.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content" style="display:flex; gap:1rem;">
+            <div class="avatar" aria-hidden="true" style="background: linear-gradient(135deg,var(--blue),var(--purple));">A</div>
+            <div>
+              <h3>Associate Pastor</h3>
+              <p>Supports preaching, pastoral care, and equipping ministries across the church.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content" style="display:flex; gap:1rem;">
+            <div class="avatar" aria-hidden="true" style="background: linear-gradient(135deg,var(--red),var(--blue));">E</div>
+            <div>
+              <h3>Elders & Ministry Leads</h3>
+              <p>Serving teams, small groups, and specialized ministries with excellence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section id="visit" class="section" aria-labelledby="visit-title">
+    <div class="container">
+      <h2 id="visit-title">Plan Your Visit</h2>
+      <div class="grid grid-3" style="margin-top:1.1rem;">
+        <div class="card">
+          <div class="content">
+            <h3>Service Times</h3>
+            <ul>
+              <li>Sunday Celebration: 9:00 AM & 11:30 AM</li>
+              <li>Midweek Prayer: Wednesdays 6:00 PM</li>
+              <li>Youth Service: Saturdays 3:00 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h3>Location</h3>
+            <p>123 Church Avenue, Your City</p>
+            <p>Parking available. Family rooms & kids check-in onsite.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <h3>What to Expect</h3>
+            <p>Warm hospitality, Christ-exalting worship, and practical teaching from the Bible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 id="contact-title">Contact Us</h2>
+      <p class="lead">We’d love to hear from you. Send a message or come worship with us this Sunday.</p>
+
+      <div class="grid grid-2" style="margin-top:1.1rem; align-items:start;">
+        <div class="card">
+          <div class="content">
+            <form action="#" method="post">
+              <div class="grid grid-2">
+                <div>
+                  <label for="name">Full Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your full name" required />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                </div>
+              </div>
+              <div>
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="How can we help?" />
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+              </div>
+              <div>
+                <button class="btn primary" type="submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <h3>Church Office</h3>
+            <p>
+              <strong>Address:</strong> 123 Church Avenue, Your City<br/>
+              <strong>Phone:</strong> +254 700 000 000<br/>
+              <strong>Email:</strong> info@cora.church
+            </p>
+            <div style="height:260px; border:1px solid #e2e8f0; border-radius:.8rem; overflow:hidden; background:linear-gradient(135deg, rgba(30,58,138,.12), rgba(109,40,217,.12)); display:grid; place-items:center;">
+              <div style="text-align:center; color:var(--muted);">
+                <div style="font-weight:800; color:var(--blue);">Map Placeholder</div>
+                <small>Add your embedded map iframe here</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container section" style="padding-bottom:2rem;">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="color:#fff;">
+            <div class="brand-logo" aria-hidden="true"></div>
+            <div>
+              <div style="font-size:1rem; line-height:1;">CITY OF REFUGEE</div>
+              <span style="font-size:.9rem;">ASSEMBLY</span>
+            </div>
+          </div>
+          <p style="margin:.75rem 0 0; color:#cbd5e1;">A place to belong, a people to grow with, a city to bless.</p>
+          <p style="margin:.75rem 0 0; color:#94a3b8; font-size:.9rem;">
+            Reference: Structure & content outline inspired by the CITAM Church and JCC Church websites.
+          </p>
+        </div>
+        <div>
+          <h3 style="margin-top:0; color:#fff;">Quick Links</h3>
+          <ul style="list-style:none; padding:0; margin:0; display:grid; gap:.4rem;">
+            <li><a href="about2.html">About</a></li>
+            <li><a href="ministries2.html">Ministries</a></li>
+            <li><a href="sermons2.html">Sermons</a></li>
+            <li><a href="events2.html">Events</a></li>
+            <li><a href="givings2.html">Giving</a></li>
+            <li><a href="contact2.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-top:0; color:#fff;">Service Times</h3>
+          <p style="margin:.4rem 0;">Sundays 9:00 AM & 11:30 AM</p>
+          <p style="margin:.4rem 0;">Wednesdays 6:00 PM</p>
+          <p style="margin:.4rem 0;">Saturdays (Youth) 3:00 PM</p>
+        </div>
+      </div>
+      <div class="copyright">© <span id="year">2025</span> City Of Refugee Assembly. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!--
+    Notes for Deployment/Customization:
+    - Replace placeholder copy (address, phone, emails) with your real details.
+    - Swap Unsplash images with your owned photos for licensing.
+    - Add your map iframe in the Contact section.
+    - If you later decide to add functionality (video players, forms), consider progressive enhancement with JS.
+  -->
+</body>
+</html>
